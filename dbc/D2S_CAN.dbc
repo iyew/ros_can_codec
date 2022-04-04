@@ -1,0 +1,65 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: D2S USER
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Brake_angle : 0|16@1- (1,0) [-10|170] "deg"  USER
+ SG_ Lon_Con_EN_lo : 0|1@1+ (1,0) [0|1] ""  USER
+ SG_ Lat_Con_En_lo : 4|1@1+ (1,0) [0|1] ""  USER
+ SG_ Lat_Over_Mod_lo : 5|1@1+ (1,0) [0|1] ""  USER
+ SG_ Steering_CMD_lo : 8|16@1+ (0.1,0) [-500|500] ""  USER
+ SG_ Brake_CMD_lo : 24|8@1+ (1,0) [0|255] ""  USER
+ SG_ Con_mode : 40|4@1+ (1,0) [0|2] ""  USER
+ SG_ Accel_CMD_lo : 32|8@1+ (1,0) [0|255] ""  USER
+
+BO_ 688 Steering_angle: 5 D2S
+ SG_ Steering_angle : 0|16@1- (0.1,0) [-500|500] "deg"  USER
+
+BO_ 690 Control: 8 USER
+ SG_ Lon_Con_En : 0|1@1+ (1,0) [0|0] ""  D2S
+ SG_ Lat_Con_En : 4|1@1+ (1,0) [0|0] ""  D2S
+ SG_ Lat_Over_Mod : 5|1@1+ (1,0) [0|0] ""  D2S
+ SG_ Steering_CMD : 8|16@1- (0.1,0) [-500|500] "deg"  D2S
+ SG_ Brake_CMD : 24|8@1+ (1,0) [0|255] ""  D2S
+ SG_ Accel_CMD : 32|8@1+ (1,0) [0|255] ""  D2S
+
+
+
+VAL_ 690 Lon_Con_En 0 "Off" 1 "On" ;
+VAL_ 690 Lat_Con_En 0 "Off" 1 "On" ;
+VAL_ 690 Lat_Over_Mod 0 "Ignore" 1 "Override" ;
+
